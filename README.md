@@ -55,7 +55,7 @@ Download and replace/move i3/i3blocks config files to `~/.config/[i3/i3blocks]`
 
 DON'T FORGET TO MODIFY THE FIELDS `[...]` IN THE CONFS FILES !!!
 
-You're going to need to write api_key for root-me in i3blocks conf file for both score and position commands. You're also going to need to write in i3 config file the path to your background image for both lock-screen (line 26) and wallpaper (line 14).
+You're going to need to write api_key and author id (the author id is the number before the `_` character in your api_key) for root-me in i3blocks conf file for both score and position commands. You're also going to need to write in i3 config file the path to your background image for both lock-screen (line 26) and wallpaper (line 14).
 
 Download and put in `~/scripts/` directory `battery_status.sh` and `cpu_usage.sh` 
 Press: `$mod+shift+r` to reload i3
