@@ -4,7 +4,7 @@
 `pactl / sar`
 
 ## One line install command:
-sudo apt install i3 i3blocks fonts-font-awesome brightnessctl jq feh i3lock xfce4-terminal
+`sudo apt install i3 i3blocks fonts-font-awesome brightnessctl jq feh i3lock xfce4-terminal`
 
 ## Install i3 / i3blocks:
 `sudo apt install i3`
