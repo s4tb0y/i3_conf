@@ -78,7 +78,7 @@ If you have broken characters install fonts: `sudo apt install fonts-powerline`
 
 Custom `~/.zshrc` file and apply changes with: `source ~/.zshrc`
 
-PowerLevel10k Theme:
+**PowerLevel10k Theme:**
 
 Clone repo: `git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k`
 
