@@ -7,7 +7,7 @@
 `pactl / sar`
 
 ## One line install command:
-`sudo apt install i3 i3blocks fonts-font-awesome brightnessctl jq feh i3lock xfce4-terminal`
+`sudo apt install i3 i3blocks fonts-font-awesome brightnessctl jq feh i3lock xfce4-terminal zsh`
 
 ## Install i3 / i3blocks:
 `sudo apt install i3`
@@ -38,6 +38,26 @@ Customization: **Open Terminal** -> **Right Click** -> **Preferences...** -> **A
 
 ![image](https://github.com/s4tb0y/i3_conf/assets/85163610/aa2f07cb-f838-4c94-95d9-e520b4b7d69e)
 
+## Zsh and OhMyZsh installation:
+Installation zsh:
+`sudo apt install zsh`
+
+Set zsh as main shell:
+`chsh -s $(which zsh)`
+
+Launch OhMyZsh install script: `sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"`
+
+If you have broken characters install fonts: `sudo apt install fonts-powerline`
+
+Custom `~/.zshrc` file and apply changes with: `source ~/.zshrc`
+
+PowerLevel10k Theme:
+
+Clone repo: `git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k`
+
+And activate it by adding in your `.zshrc` file : `ZSH_THEME="powerlevel10k/powerlevel10k"`
+
+Then config p10k: `p10k configure`
 
 ## Configure touchpad for natural scrolling and tapping:
 Edit libinput conf file:
