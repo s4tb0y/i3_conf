@@ -1,0 +1,97 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+align=center
+separator=false
+color=#f8f8f2
+separator_block_width=15
+markup=pango
+
+
+[root-me_position]
+interval=once
+command=curl -s -b "api_key=[...]" https://api.www.root-me.org/auteurs/[...] | jq -r '.position' | awk '{printf("%d th\n", $1)}'
+color=#5468CD
+label=🥇
+
+[root-me_score]
+interval=once
+command=curl -s -b "api_key=[...]" https://api.www.root-me.org/auteurs/[...] | jq -r '.score' | awk '{printf("%d pts\n", $1)}'
+color=#ffffff
+label=💀
+
+
+[wifi]
+#full_text=Need to set the wifi
+#website=https://vivien.github.io/i3blocks
+#command=xdg-open "$website"
+interval=5
+command=iwgetid -r | awk '{printf(" %s\n", $1)}'
+color=#ff79c6
+#border=#ff79c6
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
+label=
+
+[cpu_stats]
+interval=1
+command=~/scripts/cpu_usage.sh
+#command=top -n 1 | grep %Cpu | awk '{printf("%s\n", $8)}'
+#command=echo 'lol'
+color=#50fa7b
+#border=#50fa7b
+#border_top=1
+#border_right=0
+#border_left=0
+#border_bottom=0
+label=
+
+[brightness]
+interval=1
+command=brightnessctl get | awk '{printf("%3.0f%\n", $1/19393*100)}'
+color=#f6df4a
+label=
+
+[volume]
+interval=once
+signal=10
+command=pactl get-sink-volume @DEFAULT_SINK@ | awk '{printf(" %s\n", $5)}'
+#command=amixer get Master | grep % | tr -d '[]' | awk '{printf(" %s~[%s]\n", $4,$6)}'
+color=#bd93f9
+#border=#bd93f9
+#border_top=1
+#border_bottom=0
+#border_right=0
+#border_left=0
+label=
+
+[battery]
+interval=1
+color=#ff5555
+#border=#ff5555
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
+command=~/scripts/battery_status.sh
+#command=cat /sys/class/power_supply/BAT0/capacity | awk '{printf(" %s%\n", $1)}'
+#label=
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S' | awk '{printf(" %s %s\n", $2,$1)}'
+interval=1
+color=#8be9fd
+#border=#8be9fd
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
+label=
