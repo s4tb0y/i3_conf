@@ -3,7 +3,7 @@
 ![image](https://github.com/s4tb0y/i3_conf/assets/85163610/1c1b544d-69a5-4f10-a405-ef8916715880)
 
 
-## ALready on Ubuntu but if not -> Prerequirements:
+## Already on Ubuntu but if not -> Prerequirements:
 `pactl / sar`
 
 ## One line install command:
@@ -12,6 +12,33 @@
 ## Install i3 / i3blocks:
 `sudo apt install i3`
 `sudo apt install i3blocks`
+
+## Install i3gaps for gaps between windows:
+Install depencies:
+
+```
+sudo apt install ninja meson libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \
+libxcb-util0-dev libxcb-icccm4-dev libyajl-dev \
+libstartup-notification0-dev libxcb-randr0-dev \
+libev-dev libxcb-cursor-dev libxcb-xinerama0-dev \
+libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev \
+autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev
+```
+
+Build i3gaps:
+
+```
+cd /path/where/you/want/the/repository
+
+# clone the repository
+git clone https://www.github.com/Airblader/i3 i3-gaps
+cd i3-gaps
+
+# compile
+mkdir -p build && cd build
+meson ..
+ninja
+```
 
 ## Install fonts for workspace and system icons on i3blocks bar:
 `sudo apt-get install fonts-font-awesome`
