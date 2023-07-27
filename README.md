@@ -1,5 +1,8 @@
 # My i3 configuration - Running on Ubuntu 22.04
 
+![image](https://github.com/s4tb0y/i3_conf/assets/85163610/98d64f0e-c926-4b9b-bd05-b5f2ab3aaf40)
+
+
 ## ALready on Ubuntu but if not -> Prerequirements:
 `pactl / sar`
 
