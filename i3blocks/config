@@ -41,6 +41,12 @@ color=#ff79c6
 #border_left=0
 label=
 
+[storage]
+interval=30
+command=df | grep /dev/nvme0n1p2 | cut -d " " -f 6
+color=#FFB33F
+label=
+
 [cpu_stats]
 interval=1
 command=~/scripts/cpu_usage.sh
