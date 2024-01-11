@@ -82,9 +82,7 @@ Custom `~/.zshrc` file and apply changes with: `source ~/.zshrc`
 
 Clone repo: `git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k`
 
-And activate it by adding in your `.zshrc` file : `ZSH_THEME="powerlevel10k/powerlevel10k"`
-
-Then config p10k: `p10k configure`
+And activate it by adding in your `.zshrc` file : `source $ZSH_CUSTOM/themes/powerlevel10k/powerlevel10k.zsh-theme"`
 
 ## Configure touchpad for natural scrolling and tapping:
 Edit libinput conf file:
